@@ -1,3 +1,4 @@
+const path = require('path')
 
 export default {
   mode: 'universal',
@@ -5,7 +6,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Trine Dreisig Photography',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,6 +24,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~assets/css/tailwind.css', 
   ],
   /*
   ** Plugins to load before mounting the App
@@ -43,7 +45,12 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-purgecss',
   ],
+  /*
+  ** PurgeCSS
+  */
+  purgeCSS: {},
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -54,10 +61,16 @@ export default {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js')
+      }
+    },
     /*
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
   }
 }
