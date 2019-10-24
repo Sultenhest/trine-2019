@@ -2,7 +2,7 @@
   <div id="app">
     <Navigation />
 
-    <main class="mr-24">
+    <main class="md:mr-24">
       <nuxt />
     </main>
   </div>
