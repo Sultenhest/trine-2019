@@ -1,9 +1,15 @@
 <template>
   <div class="container">
-    <h1>Home</h1>
+    <ProjectList />
   </div>
 </template>
 
 <script>
-export default {}
+import ProjectList from '~/components/project/ProjectList.vue'
+
+export default {
+  components: {
+    ProjectList
+  }
+}
 </script>
