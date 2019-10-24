@@ -1,7 +1,19 @@
 <template>
   <div id="app">
-    <nuxt />
+    <Navigation />
+
+    <main class="mr-24">
+      <nuxt />
+    </main>
   </div>
 </template>
 
-<style></style>
+<script>
+import Navigation from '~/components/Navigation.vue'
+
+export default {
+  components: {
+    Navigation
+  }
+}
+</script>
