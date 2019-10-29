@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <div class="nav__logo top-0 bottom-auto md:top-auto md:bottom-0">
+    <div class="nav__logo top-auto bottom-0 mx-8 md:m-0 md:fixed">
       <nuxt-link class="nav__link" to="/">Logo</nuxt-link>
     </div>
   </nav>
@@ -15,7 +15,7 @@
 
 <style lang="scss">
 .nav__container {
-  @apply .top-0 .right-0;
+  @apply .z-40 .flex .top-0 .right-0;
 
   .nav__inner {
     @apply .h-24;
@@ -24,6 +24,8 @@
     @media (min-width: 768px) {
       transform: rotate(90deg) translateY(-100%);
       transform-origin: 0 0;
+      max-width: initial;
+      width: initial;
     }
 
     .nav__links {
@@ -36,7 +38,7 @@
   }
 
   .nav__logo {
-    @apply .fixed .right-0 .w-24 .h-24 .flex .justify-center .items-center;
+    @apply .right-0 .w-24 .h-24 .flex .justify-center .items-center;
   }
 }
 </style>

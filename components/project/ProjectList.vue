@@ -19,3 +19,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.projectlist__container{
+  @apply .z-0;
+}
+</style>
