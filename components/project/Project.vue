@@ -1,18 +1,21 @@
 <template>
   <div class="project__container md:h-screen md:my-0">
-    <img class="project__image" src="https://source.unsplash.com/random/1000x800" />
+    <img class="project__image" :src="imageSrc" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Project'
+  name: 'Project',
+  props: {
+    imageSrc: String
+  }
 }
 </script>
 
 <style lang="scss">
 .project__container {
-  @apply .mx-4 .my-4 .flex .justify-center .items-center;
+  @apply .flex .justify-center .items-center;
 
   .project__image {
     @apply .shadow;
